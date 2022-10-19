@@ -1,6 +1,7 @@
 import React , {useState}from 'react'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { NotificationButton } from '../notificationButton';
 import './styles.css'
 
 export function SalesCard() {
@@ -55,7 +56,7 @@ const [maxDate, setMaxDate] = useState( new Date());
                             <td className='show992'>$50</td>
                             <td >
                                 <div className='dsmeta-red-btn-container'>
-                                          button
+                                         <NotificationButton saleId={1} />
                                 </div>
                             </td>
                         </tr>
