@@ -2,7 +2,7 @@ package com.danielrgb23.dsmeta.controler;
 
 import com.danielrgb23.dsmeta.entities.Sale;
 import com.danielrgb23.dsmeta.services.SaleService;
-import com.danielrgb23.dsmeta.services.SmsService;
+// import com.danielrgb23.dsmeta.services.SmsService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -17,8 +17,8 @@ public class SaleControler {
     @Autowired
     private SaleService service;
 
-    @Autowired
-    private SmsService smsService;
+    // @Autowired
+    // private SmsService smsService;
 
     @GetMapping
     public Page<Sale> findSales(
@@ -28,8 +28,8 @@ public class SaleControler {
 
         return service.findSales(minDate, maxDate,pageable);
     }
-    @GetMapping("/{id}/notification")
-    public void notifySms(@PathVariable Long id){
-        smsService.sendSms(id);
-    }
+    // @GetMapping("/{id}/notification")
+    // public void notifySms(@PathVariable Long id){
+    //     smsService.sendSms(id);
+    // }
 }
